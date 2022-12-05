@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ubw4+euSi+IgqJ/jKFcXQX1tUaW1oINNmfV8IC6Pm2FFBxbsMb5IZSUSdrpiy+nm+jmPDqSUc5UBqDBG+fvlkQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\caleb\\source\\repos\\LinkingOckwig\\LinkingOckwig\\LinkingOckwig.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\caleb\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
+    "C:\\Users\\caleb\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512"
+  ],
+  "logs": []
+}
