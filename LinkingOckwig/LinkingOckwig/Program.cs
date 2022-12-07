@@ -146,10 +146,10 @@ internal class Program
             string ContentsForMemory = (NewContents + SymbolValue).ToString("X");
             while(ContentsForMemory.Length < halfBytes)
             {
-                ContentsForMemory = "0";
+                ContentsForMemory = "0" + ContentsForMemory;
             }
             int i = 0;
-            while(ContentsForMemory.Length > 0)
+            while(ContentsForMemory.Length >= 2)
             {
                 string contents = ContentsForMemory.Substring(0, 2);
                 ContentsForMemory = ContentsForMemory.Substring(2);
