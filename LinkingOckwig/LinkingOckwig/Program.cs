@@ -55,6 +55,8 @@ internal class Program
                     MemoryMap.AddLast(new Mem(MemoryCounter, "UU"));
                     MemoryCounter++;
                 }
+                SymbolTable.AddLast(new Symbol(ProgramLabel, ProgramStart, ProgramLabel, ProgramBuffer));
+
 
             }
             else if (CurrentLine.Value.StartsWith('T'))
@@ -146,11 +148,15 @@ internal class Program
             {
                 ContentsForMemory = "0";
             }
-            for (int i = 0; i <= halfBytes/2; i++)
+            int i = 0;
+            while(ContentsForMemory.Length > 0)
             {
                 string contents = ContentsForMemory.Substring(0, 2);
                 ContentsForMemory = ContentsForMemory.Substring(2);
-                Methods.ModifyNode(MemoryMap, LineStartAddress + i + Node.ProgramBuffer, contents);
+                Console.WriteLine((LineStartAddress + i + Node.ProgramBuffer).ToString("X") + "Location");
+                Console.WriteLine("Program Buffer: " + Node.ProgramBuffer.ToString("X") +"  Contents:" + contents);
+                Methods.ModifyNode(MemoryMap, LineStartAddress + i, contents);
+                i++;
             }
         }
         Methods.Estab(CSectList, SymbolTable);
