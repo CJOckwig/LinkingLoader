@@ -6,14 +6,19 @@ using System.Threading.Tasks;
 
 namespace LinkingOckwig
 {
-    internal class Symbol
+    public class Symbol
     {
-        public Symbol(string name, string val)
+        public Symbol(string Name, string val, string CSect, int ProgramBuffer)
         {
-            Name = name;
+            this.Name = Name;
             Value = Convert.ToInt32(val, 16);
+            this.CSect = CSect;
+            LoadAddress = Value + ProgramBuffer + 8560;
         }
         public string Name { get; set; }
+        public string CSect {get; set;}
         public int Value { get; set; }
+        public int LoadAddress { get; set; }
+
     }
 }
